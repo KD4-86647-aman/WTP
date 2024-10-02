@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculator</title>
+  </head>
+  <body>
+    <center>
+      <div style="border: 2px solid black; width: 50%; margin-top: 50px">
+        <br />
+
+        <h3><b><u>Calculator</u></b></h3>
+        <div>
+          Enter number 1 <input type="number" id="number1" />
+          <br />
+          <br />
+          Enter number 2 <input type="number" id="number2" /> <br /><br />
+          Result <input style="margin-left: 58px" type="number" id="result" />
+        </div>
+
+        <br />
+        <br />
+        <div style="padding-inline: 10px">
+          <input type="button" value="Addition" onclick="Addition()" />
+          <input type="button" value="Substraction" onclick="Substraction()" />
+          <input
+            type="button"
+            value="Multiplication"
+            onclick="Multiplication()"
+          />
+          <input type="button" value="Division" onclick="Division()" />
+        </div>
+        <br />
+        <br />
+      </div>
+    </center>
+
+    <script>
+      function Addition() {
+        var refNum1 = document.getElementById("number1");
+        var refNum2 = document.getElementById("number2");
+        var result = parseInt(refNum1.value) + parseInt(refNum2.value);
+        document.getElementById("result").value = result;
+      }
+      function Substraction() {
+        var refNum1 = document.getElementById("number1");
+        var refNum2 = document.getElementById("number2");
+        var result = parseInt(refNum1.value) - parseInt(refNum2.value);
+        document.getElementById("result").value = result;
+      }
+      function Multiplication() {
+        var refNum1 = document.getElementById("number1");
+        var refNum2 = document.getElementById("number2");
+        var result = parseInt(refNum1.value) * parseInt(refNum2.value);
+        document.getElementById("result").value = result;
+      }
+      function Division() {
+        var refNum1 = document.getElementById("number1");
+        var refNum2 = document.getElementById("number2");
+        var result = parseInt(refNum1.value) / parseInt(refNum2.value);
+        document.getElementById("result").value = result;
+      }
+    </script>
+  </body>
+</html>
